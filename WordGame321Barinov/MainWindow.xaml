@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WordGame321Barinov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush ImageSource="Resources/background.jpg" Stretch="Fill" />
     </Window.Background>
     <Grid>
         <Label Content="Words Game" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="23"/>
-        <TextBox Width="400" Height="80" Foreground="White" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="60" FontSize="19" IsReadOnly="True" Opacity="0"></TextBox>
+        <TextBox x:Name="TB_Question" Width="400" Height="80" Foreground="Black" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="60" FontSize="19" ></TextBox>
         <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Foreground="White" Margin="140" >Введите ваш ответ:</Label>
-        <TextBox x:Name="isWordRight" Width="90" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="130" FontSize="15" IsReadOnly="True"/>
+        <TextBox x:Name="TB_isWordRight" Width="90" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="130" FontSize="15" IsReadOnly="True"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="70" >
-            <TextBox Width="250" Height="30" FontSize="15"></TextBox>
+            <TextBox x:Name="TB_EnterWord" Width="250" Height="30" FontSize="15"></TextBox>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Отправить" Background="White" Width="100" Height="23" Margin="10"/>
+                <Button Content="Отправить" Background="White" Width="100" Height="23" Margin="10" Click="Button_Click"/>
                 <Button Content="Пропустить вопрос" Background="White" Width="120" Height="23"/>
             </StackPanel>
         </StackPanel>

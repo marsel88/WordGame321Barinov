@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MongoDB.Driver;
 
 namespace WordGame321Barinov
 {
@@ -24,6 +24,11 @@ namespace WordGame321Barinov
         public MainWindow()
         {
             InitializeComponent();
+            MongoClient client = new MongoClient("mongodb://localhost:27017");
+        }
+private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
